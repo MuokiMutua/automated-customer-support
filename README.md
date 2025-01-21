@@ -55,7 +55,7 @@ This system performs the following automated tasks:
 - **Google Forms**: Collects customer inquiries.
 - **Monday.com**: Manages and tracks support tickets.
 - **Slack**: Sends real-time notifications.
-- **Email (via Make.com)**: Drafts follow-up emails.
+- **Email **: Drafts follow-up emails.
 
 
 ---
