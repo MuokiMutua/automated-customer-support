@@ -1,0 +1,1528 @@
+{
+    "name": "Customer Support System #1",
+    "flow": [
+        {
+            "id": 1,
+            "module": "google-forms:watchResponses",
+            "version": 2,
+            "parameters": {
+                "limit": 2,
+                "formId": "",
+                "__IMTCONN__": 3023532
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": ""
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "formId",
+                        "type": "text",
+                        "label": "Form ID",
+                        "required": true
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "required": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "responseId",
+                        "type": "text",
+                        "label": "Response ID"
+                    },
+                    {
+                        "name": "createTime",
+                        "type": "date",
+                        "label": "Create Time"
+                    },
+                    {
+                        "name": "lastSubmittedTime",
+                        "type": "date",
+                        "label": "Last Submitted Time"
+                    },
+                    {
+                        "name": "respondentEmail",
+                        "type": "text",
+                        "label": "Respondent Email"
+                    },
+                    {
+                        "name": "answers",
+                        "spec": [
+                            {
+                                "name": "0bab9a15",
+                                "spec": [
+                                    {
+                                        "name": "questionId",
+                                        "type": "text",
+                                        "label": "Question ID"
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "spec": [
+                                            {
+                                                "name": "score",
+                                                "type": "number",
+                                                "label": "Score"
+                                            },
+                                            {
+                                                "name": "correct",
+                                                "type": "boolean",
+                                                "label": "Correct"
+                                            },
+                                            {
+                                                "name": "feedback",
+                                                "spec": [
+                                                    {
+                                                        "name": "text",
+                                                        "type": "text",
+                                                        "label": "Text"
+                                                    },
+                                                    {
+                                                        "name": "material",
+                                                        "spec": [
+                                                            {
+                                                                "name": "link",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "uri",
+                                                                        "type": "text",
+                                                                        "label": "URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Link"
+                                                            },
+                                                            {
+                                                                "name": "video",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "youtubeUri",
+                                                                        "type": "text",
+                                                                        "label": "Youtube URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Video"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Material"
+                                                    },
+                                                    {
+                                                        "name": "textAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "value",
+                                                                        "type": "text",
+                                                                        "label": "value"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Text Answers"
+                                                    },
+                                                    {
+                                                        "name": "fileUploadAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "fileId",
+                                                                        "type": "text",
+                                                                        "label": "File ID"
+                                                                    },
+                                                                    {
+                                                                        "name": "fileName",
+                                                                        "type": "text",
+                                                                        "label": "File Name"
+                                                                    },
+                                                                    {
+                                                                        "name": "mimeType",
+                                                                        "type": "text",
+                                                                        "label": "MIME Type"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "File Upload Answers"
+                                                    }
+                                                ],
+                                                "type": "collection",
+                                                "label": "Feedback"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Grade"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "What is your Full Name?"
+                            },
+                            {
+                                "name": "6ff42bae",
+                                "spec": [
+                                    {
+                                        "name": "questionId",
+                                        "type": "text",
+                                        "label": "Question ID"
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "spec": [
+                                            {
+                                                "name": "score",
+                                                "type": "number",
+                                                "label": "Score"
+                                            },
+                                            {
+                                                "name": "correct",
+                                                "type": "boolean",
+                                                "label": "Correct"
+                                            },
+                                            {
+                                                "name": "feedback",
+                                                "spec": [
+                                                    {
+                                                        "name": "text",
+                                                        "type": "text",
+                                                        "label": "Text"
+                                                    },
+                                                    {
+                                                        "name": "material",
+                                                        "spec": [
+                                                            {
+                                                                "name": "link",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "uri",
+                                                                        "type": "text",
+                                                                        "label": "URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Link"
+                                                            },
+                                                            {
+                                                                "name": "video",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "youtubeUri",
+                                                                        "type": "text",
+                                                                        "label": "Youtube URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Video"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Material"
+                                                    },
+                                                    {
+                                                        "name": "textAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "value",
+                                                                        "type": "text",
+                                                                        "label": "value"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Text Answers"
+                                                    },
+                                                    {
+                                                        "name": "fileUploadAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "fileId",
+                                                                        "type": "text",
+                                                                        "label": "File ID"
+                                                                    },
+                                                                    {
+                                                                        "name": "fileName",
+                                                                        "type": "text",
+                                                                        "label": "File Name"
+                                                                    },
+                                                                    {
+                                                                        "name": "mimeType",
+                                                                        "type": "text",
+                                                                        "label": "MIME Type"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "File Upload Answers"
+                                                    }
+                                                ],
+                                                "type": "collection",
+                                                "label": "Feedback"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Grade"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "What is your Email Address?"
+                            },
+                            {
+                                "name": "0e65e8c4",
+                                "spec": [
+                                    {
+                                        "name": "questionId",
+                                        "type": "text",
+                                        "label": "Question ID"
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "spec": [
+                                            {
+                                                "name": "score",
+                                                "type": "number",
+                                                "label": "Score"
+                                            },
+                                            {
+                                                "name": "correct",
+                                                "type": "boolean",
+                                                "label": "Correct"
+                                            },
+                                            {
+                                                "name": "feedback",
+                                                "spec": [
+                                                    {
+                                                        "name": "text",
+                                                        "type": "text",
+                                                        "label": "Text"
+                                                    },
+                                                    {
+                                                        "name": "material",
+                                                        "spec": [
+                                                            {
+                                                                "name": "link",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "uri",
+                                                                        "type": "text",
+                                                                        "label": "URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Link"
+                                                            },
+                                                            {
+                                                                "name": "video",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "youtubeUri",
+                                                                        "type": "text",
+                                                                        "label": "Youtube URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Video"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Material"
+                                                    },
+                                                    {
+                                                        "name": "textAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "value",
+                                                                        "type": "text",
+                                                                        "label": "value"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Text Answers"
+                                                    },
+                                                    {
+                                                        "name": "fileUploadAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "fileId",
+                                                                        "type": "text",
+                                                                        "label": "File ID"
+                                                                    },
+                                                                    {
+                                                                        "name": "fileName",
+                                                                        "type": "text",
+                                                                        "label": "File Name"
+                                                                    },
+                                                                    {
+                                                                        "name": "mimeType",
+                                                                        "type": "text",
+                                                                        "label": "MIME Type"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "File Upload Answers"
+                                                    }
+                                                ],
+                                                "type": "collection",
+                                                "label": "Feedback"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Grade"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Where are you Located?"
+                            },
+                            {
+                                "name": "65716ff5",
+                                "spec": [
+                                    {
+                                        "name": "questionId",
+                                        "type": "text",
+                                        "label": "Question ID"
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "spec": [
+                                            {
+                                                "name": "score",
+                                                "type": "number",
+                                                "label": "Score"
+                                            },
+                                            {
+                                                "name": "correct",
+                                                "type": "boolean",
+                                                "label": "Correct"
+                                            },
+                                            {
+                                                "name": "feedback",
+                                                "spec": [
+                                                    {
+                                                        "name": "text",
+                                                        "type": "text",
+                                                        "label": "Text"
+                                                    },
+                                                    {
+                                                        "name": "material",
+                                                        "spec": [
+                                                            {
+                                                                "name": "link",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "uri",
+                                                                        "type": "text",
+                                                                        "label": "URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Link"
+                                                            },
+                                                            {
+                                                                "name": "video",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "youtubeUri",
+                                                                        "type": "text",
+                                                                        "label": "Youtube URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Video"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Material"
+                                                    },
+                                                    {
+                                                        "name": "textAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "value",
+                                                                        "type": "text",
+                                                                        "label": "value"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Text Answers"
+                                                    },
+                                                    {
+                                                        "name": "fileUploadAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "fileId",
+                                                                        "type": "text",
+                                                                        "label": "File ID"
+                                                                    },
+                                                                    {
+                                                                        "name": "fileName",
+                                                                        "type": "text",
+                                                                        "label": "File Name"
+                                                                    },
+                                                                    {
+                                                                        "name": "mimeType",
+                                                                        "type": "text",
+                                                                        "label": "MIME Type"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "File Upload Answers"
+                                                    }
+                                                ],
+                                                "type": "collection",
+                                                "label": "Feedback"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Grade"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "What type of accounting services are you looking for \n( e.g.., Tax Preparation, Audit, Consulting) ?"
+                            },
+                            {
+                                "name": "714d3d8c",
+                                "spec": [
+                                    {
+                                        "name": "questionId",
+                                        "type": "text",
+                                        "label": "Question ID"
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "spec": [
+                                            {
+                                                "name": "score",
+                                                "type": "number",
+                                                "label": "Score"
+                                            },
+                                            {
+                                                "name": "correct",
+                                                "type": "boolean",
+                                                "label": "Correct"
+                                            },
+                                            {
+                                                "name": "feedback",
+                                                "spec": [
+                                                    {
+                                                        "name": "text",
+                                                        "type": "text",
+                                                        "label": "Text"
+                                                    },
+                                                    {
+                                                        "name": "material",
+                                                        "spec": [
+                                                            {
+                                                                "name": "link",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "uri",
+                                                                        "type": "text",
+                                                                        "label": "URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Link"
+                                                            },
+                                                            {
+                                                                "name": "video",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "youtubeUri",
+                                                                        "type": "text",
+                                                                        "label": "Youtube URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Video"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Material"
+                                                    },
+                                                    {
+                                                        "name": "textAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "value",
+                                                                        "type": "text",
+                                                                        "label": "value"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Text Answers"
+                                                    },
+                                                    {
+                                                        "name": "fileUploadAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "fileId",
+                                                                        "type": "text",
+                                                                        "label": "File ID"
+                                                                    },
+                                                                    {
+                                                                        "name": "fileName",
+                                                                        "type": "text",
+                                                                        "label": "File Name"
+                                                                    },
+                                                                    {
+                                                                        "name": "mimeType",
+                                                                        "type": "text",
+                                                                        "label": "MIME Type"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "File Upload Answers"
+                                                    }
+                                                ],
+                                                "type": "collection",
+                                                "label": "Feedback"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Grade"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "What's the Size of your Company \n(number of employees and/or annual revenue) ?"
+                            },
+                            {
+                                "name": "10f51cf5",
+                                "spec": [
+                                    {
+                                        "name": "questionId",
+                                        "type": "text",
+                                        "label": "Question ID"
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "spec": [
+                                            {
+                                                "name": "score",
+                                                "type": "number",
+                                                "label": "Score"
+                                            },
+                                            {
+                                                "name": "correct",
+                                                "type": "boolean",
+                                                "label": "Correct"
+                                            },
+                                            {
+                                                "name": "feedback",
+                                                "spec": [
+                                                    {
+                                                        "name": "text",
+                                                        "type": "text",
+                                                        "label": "Text"
+                                                    },
+                                                    {
+                                                        "name": "material",
+                                                        "spec": [
+                                                            {
+                                                                "name": "link",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "uri",
+                                                                        "type": "text",
+                                                                        "label": "URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Link"
+                                                            },
+                                                            {
+                                                                "name": "video",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "youtubeUri",
+                                                                        "type": "text",
+                                                                        "label": "Youtube URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Video"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Material"
+                                                    },
+                                                    {
+                                                        "name": "textAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "value",
+                                                                        "type": "text",
+                                                                        "label": "value"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Text Answers"
+                                                    },
+                                                    {
+                                                        "name": "fileUploadAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "fileId",
+                                                                        "type": "text",
+                                                                        "label": "File ID"
+                                                                    },
+                                                                    {
+                                                                        "name": "fileName",
+                                                                        "type": "text",
+                                                                        "label": "File Name"
+                                                                    },
+                                                                    {
+                                                                        "name": "mimeType",
+                                                                        "type": "text",
+                                                                        "label": "MIME Type"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "File Upload Answers"
+                                                    }
+                                                ],
+                                                "type": "collection",
+                                                "label": "Feedback"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Grade"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "What is your phone Number"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Answers"
+                    },
+                    {
+                        "name": "totalScore",
+                        "type": "number",
+                        "label": "Total Score"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "monday:CreateItem",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 5031295
+            },
+            "mapper": {
+                "name": "{{1.answers.`0bab9a15`.textAnswers.answers[].value}}",
+                "boardId": "1786550145",
+                "groupId": "topics",
+                "columnValuesToChange": [
+                    {
+                        "columnId": "person",
+                        "columnValue": {
+                            "personsAndTeams": [
+                                {
+                                    "id": "71128634",
+                                    "kind": "person"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "columnId": "date4",
+                        "columnValue": {
+                            "date": "{{1.createTime}}",
+                            "includeTime": false
+                        }
+                    },
+                    {
+                        "columnId": "email_mkmdk353",
+                        "columnValue": {
+                            "text": "{{1.answers.`6ff42bae`.textAnswers.answers[].value}}",
+                            "email": "{{1.answers.`6ff42bae`.textAnswers.answers[].value}}"
+                        }
+                    },
+                    {
+                        "columnId": "location_mkmdapxf",
+                        "columnValue": {
+                            "lat": "1.91019191",
+                            "lng": "93.3434344",
+                            "address": "{{1.answers.`0e65e8c4`.textAnswers.answers[].value}}"
+                        }
+                    },
+                    {
+                        "columnId": "phone_mkmdh90j",
+                        "columnValue": {
+                            "phone": "{{1.answers.`10f51cf5`.textAnswers.answers[].value}}",
+                            "countryShortName": "KE"
+                        }
+                    },
+                    {
+                        "columnId": "text_mkmdy0h9",
+                        "columnValue": "{{1.answers.`714d3d8c`.textAnswers.answers[].value}}"
+                    },
+                    {
+                        "columnId": "status",
+                        "columnValue": {
+                            "index": "0",
+                            "selectType": "index2index"
+                        }
+                    },
+                    {
+                        "columnId": "text_mkmd4wbv",
+                        "columnValue": "{{1.answers.`65716ff5`.textAnswers.answers[].value}}"
+                    }
+                ],
+                "create_labels_if_missing": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "boardId": {
+                            "mode": "chose",
+                            "label": "Customer Support  ::  public"
+                        },
+                        "groupId": {
+                            "mode": "chose",
+                            "label": "Customer Support"
+                        },
+                        "columnValuesToChange": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "columnId": {
+                                        "mode": "chose",
+                                        "label": "Assignee"
+                                    },
+                                    "columnValue": {
+                                        "nested": {
+                                            "personsAndTeams": {
+                                                "mode": "chose",
+                                                "items": [
+                                                    {
+                                                        "id": {
+                                                            "mode": "chose",
+                                                            "label": ""
+                                                        },
+                                                        "kind": {
+                                                            "mode": "chose",
+                                                            "label": "Person"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "columnId": {
+                                        "mode": "chose",
+                                        "label": "Date Added"
+                                    },
+                                    "columnValue": {
+                                        "nested": {
+                                            "includeTime": {
+                                                "mode": "chose"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "columnId": {
+                                        "mode": "chose",
+                                        "label": "Email"
+                                    }
+                                },
+                                {
+                                    "columnId": {
+                                        "mode": "chose",
+                                        "label": "Location"
+                                    }
+                                },
+                                {
+                                    "columnId": {
+                                        "mode": "chose",
+                                        "label": "Phone"
+                                    }
+                                },
+                                {
+                                    "columnId": {
+                                        "mode": "chose",
+                                        "label": "Size of Company"
+                                    }
+                                },
+                                {
+                                    "columnId": {
+                                        "mode": "chose",
+                                        "label": "Status"
+                                    },
+                                    "columnValue": {
+                                        "nested": {
+                                            "index": {
+                                                "mode": "chose",
+                                                "label": "Working on it"
+                                            },
+                                            "selectType": {
+                                                "mode": "chose",
+                                                "label": "Index"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "columnId": {
+                                        "mode": "chose",
+                                        "label": "Type of Service"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "monday"
+                            },
+                            "label": "My Monday v2 connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:monday",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Item Name",
+                        "required": true
+                    },
+                    {
+                        "name": "boardId",
+                        "type": "select",
+                        "label": "Board ID",
+                        "required": true
+                    },
+                    {
+                        "name": "create_labels_if_missing",
+                        "type": "boolean",
+                        "label": "Create Labels if Missing",
+                        "required": true
+                    },
+                    {
+                        "name": "groupId",
+                        "type": "select",
+                        "label": "Group ID"
+                    },
+                    {
+                        "name": "columnValuesToChange",
+                        "spec": [
+                            {
+                                "name": "columnId",
+                                "type": "select",
+                                "label": "Column ID",
+                                "dynamic": true,
+                                "options": {
+                                    "store": []
+                                },
+                                "required": true,
+                                "validate": false
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Array of column values to change"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "email:ActionCreateDraft",
+            "version": 7,
+            "parameters": {
+                "account": 3209846
+            },
+            "mapper": {
+                "cc": [],
+                "to": [
+                    "{{1.answers.`6ff42bae`.textAnswers.answers[].value}}"
+                ],
+                "bcc": [],
+                "from": "",
+                "text": " ",
+                "folder": "[Gmail]/Drafts",
+                "sender": "",
+                "headers": [],
+                "replyTo": "",
+                "subject": "Customer Inquiry",
+                "priority": "normal",
+                "inReplyTo": "",
+                "references": [],
+                "attachments": [],
+                "contentType": "text"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "cc": {
+                            "mode": "chose"
+                        },
+                        "to": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "bcc": {
+                            "mode": "chose"
+                        },
+                        "folder": {
+                            "mode": "chose",
+                            "path": [
+                                "Drafts",
+                                "Drafts"
+                            ]
+                        },
+                        "priority": {
+                            "label": "Normal"
+                        },
+                        "references": {
+                            "mode": "chose"
+                        },
+                        "attachments": {
+                            "mode": "chose"
+                        },
+                        "contentType": {
+                            "label": "Plaintext"
+                        }
+                    },
+                    "parameters": {
+                        "account": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            },
+                            "label": ""
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "account",
+                        "type": "account:imap,google-restricted,microsoft-smtp-imap",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "folder",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "to",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        },
+                        "type": "array",
+                        "label": "To",
+                        "required": true
+                    },
+                    {
+                        "name": "subject",
+                        "type": "text",
+                        "label": "Subject"
+                    },
+                    {
+                        "name": "contentType",
+                        "type": "select",
+                        "label": "Content Type",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "html",
+                                "text"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "attachments",
+                        "spec": [
+                            {
+                                "name": "fileName",
+                                "type": "filename",
+                                "label": "File name",
+                                "required": true,
+                                "semantic": "file:name"
+                            },
+                            {
+                                "name": "data",
+                                "type": "buffer",
+                                "label": "Data",
+                                "required": true,
+                                "semantic": "file:data"
+                            },
+                            {
+                                "name": "cid",
+                                "type": "text",
+                                "label": "Content-ID"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Attachments"
+                    },
+                    {
+                        "name": "cc",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        "type": "array",
+                        "label": "Copy recipient"
+                    },
+                    {
+                        "name": "bcc",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        "type": "array",
+                        "label": "Blind copy recipient"
+                    },
+                    {
+                        "name": "from",
+                        "type": "text",
+                        "label": "From"
+                    },
+                    {
+                        "name": "sender",
+                        "type": "text",
+                        "label": "Sender"
+                    },
+                    {
+                        "name": "replyTo",
+                        "type": "text",
+                        "label": "Reply-To"
+                    },
+                    {
+                        "name": "inReplyTo",
+                        "type": "text",
+                        "label": "In-Reply-To"
+                    },
+                    {
+                        "name": "references",
+                        "spec": {
+                            "name": "value",
+                            "type": "text",
+                            "label": "Reference",
+                            "required": true
+                        },
+                        "type": "array",
+                        "label": "References"
+                    },
+                    {
+                        "name": "priority",
+                        "type": "select",
+                        "label": "Priority",
+                        "validate": {
+                            "enum": [
+                                "high",
+                                "normal",
+                                "low"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value",
+                                "required": true
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Content"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "slack:CreateMessage",
+            "version": 4,
+            "parameters": {
+                "__IMTCONN__": 3039786
+            },
+            "mapper": {
+                "text": "",
+                "parse": false,
+                "mrkdwn": true,
+                "channel": "C07PY4USJ2C",
+                "channelType": "public",
+                "channelWType": "list"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "parse": {
+                            "mode": "chose"
+                        },
+                        "mrkdwn": {
+                            "mode": "chose"
+                        },
+                        "channel": {
+                            "mode": "chose",
+                            "label": "social"
+                        },
+                        "link_names": {
+                            "mode": "chose"
+                        },
+                        "channelType": {
+                            "label": "Public channel"
+                        },
+                        "channelWType": {
+                            "label": "Select from the list"
+                        },
+                        "unfurl_links": {
+                            "mode": "chose"
+                        },
+                        "unfurl_media": {
+                            "mode": "chose"
+                        },
+                        "reply_broadcast": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "slack2"
+                            },
+                            "label": ""
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:slack2,slack3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "channelWType",
+                        "type": "select",
+                        "label": "Enter a channel ID or name",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "manualy",
+                                "list"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Text"
+                    },
+                    {
+                        "name": "blocks",
+                        "type": "text",
+                        "label": "Blocks"
+                    },
+                    {
+                        "name": "thread_ts",
+                        "type": "text",
+                        "label": "Thread message ID (time stamp)"
+                    },
+                    {
+                        "name": "reply_broadcast",
+                        "type": "boolean",
+                        "label": "Reply broadcast"
+                    },
+                    {
+                        "name": "link_names",
+                        "type": "boolean",
+                        "label": "Link names"
+                    },
+                    {
+                        "name": "parse",
+                        "type": "boolean",
+                        "label": "Parse message text"
+                    },
+                    {
+                        "name": "mrkdwn",
+                        "type": "boolean",
+                        "label": "Use markdown"
+                    },
+                    {
+                        "name": "unfurl_links",
+                        "type": "boolean",
+                        "label": "Unfurl primarily text-based content"
+                    },
+                    {
+                        "name": "unfurl_media",
+                        "type": "boolean",
+                        "label": "Unfurl media content"
+                    },
+                    {
+                        "name": "icon_emoji",
+                        "type": "text",
+                        "label": "Icon emoji"
+                    },
+                    {
+                        "name": "icon_url",
+                        "type": "url",
+                        "label": "Icon url"
+                    },
+                    {
+                        "name": "username",
+                        "type": "text",
+                        "label": "User name"
+                    },
+                    {
+                        "name": "channelType",
+                        "type": "select",
+                        "label": "Channel type",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "public",
+                                "private",
+                                "im",
+                                "mpim"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "channel",
+                        "type": "select",
+                        "label": "Public channel",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "",
+        "notes": []
+    }
+}
